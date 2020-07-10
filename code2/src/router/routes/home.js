@@ -1,0 +1,33 @@
+// 首页
+export default {
+    path:'/home',
+    name:"首页",
+    component:()=>import("../../views/home.vue"),
+    children:[
+        {
+            path:"recommend",
+            name:"推荐",
+            component:()=>import("../../components/home/recommend.vue")
+        },
+        {
+            path:"phone",
+            name:"手机",
+            component:()=>import("../../components/home/phone.vue")
+        },
+        {
+            path:"music",
+            name:"声学",
+            component:()=>import("../../components/home/music.vue")
+        },
+        {
+            path:"life",
+            name:"生活",
+            component:()=>import("../../components/home/life.vue")
+        },
+        {
+            path:"parts",
+            name:"配件",
+            component:()=>import("../../components/home/parts.vue")
+        }
+    ]
+}

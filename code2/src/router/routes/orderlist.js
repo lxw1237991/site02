@@ -1,0 +1,31 @@
+export default [
+    {
+        path:"/orderlist",
+        name:"订单列表",
+        component:()=>import("../../views/orderlist.vue"),
+        redirect:"/orderlist/orderall",
+        children:[
+            {
+                path:"orderall",
+                name:"全部订单",
+                component:()=>import("../../components/orderlist/orderall.vue")
+            },
+            {
+                path:"notpay",
+                name:"未支付",
+                component:()=>import("../../components/orderlist/notpay.vue")
+            },
+            {
+                path:"notreceipt",
+                name:"待收货",
+                component:()=>import("../../components/orderlist/notreceipt.vue")
+            },
+            {
+                path:"aftersale",
+                name:"待发货",
+                component:()=>import("../../components/orderlist/aftersale.vue")
+            },
+        ]
+    }
+]
+   
